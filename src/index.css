@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    font-family: "Space Grotesk", sans-serif;
+}
+.cvcpin{
+    padding-right: 15%;
+}
+input{
+    border: 1px solid gray;
+        border-radius:10px ;
+    
+}
