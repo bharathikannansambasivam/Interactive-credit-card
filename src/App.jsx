@@ -5,23 +5,13 @@ import Greeting from "./components/Greeting";
 export const Context = React.createContext();
 
 function App() {
-  const [cardDetails, setCardDetails] = useState({
-    cardNo: "0000 0000 0000 0000",
-    customerName: "Bharathikannan",
-    expMonth: "",
-    expYear: "",
-    cvcPin: "",
-  });
-
   return (
-    <Context.Provider value={{ cardDetails, setCardDetails }}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<CardDetails />}></Route>
-          <Route path="/greeting" element={<Greeting />}></Route>
-        </Routes>
-      </BrowserRouter>
-    </Context.Provider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<CardDetails />}></Route>
+        <Route path="/greeting" element={<Greeting />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
