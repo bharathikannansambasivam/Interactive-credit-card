@@ -29,7 +29,7 @@ function Input({ setFormValues }) {
         onSubmit={formik.handleSubmit}
         className="flex flex-col gap-3 px-6 mt-28 text-2xl sm:p-20  sm:w-3/4 justify-center  sm:h-screen sm:mt-0 "
       >
-        <label>CARDHOLDER NAME</label>
+        <label className="text-xl">CARDHOLDER NAME</label>
         <input
           name="customerName"
           className="border-2 p-2 rounded-md"
@@ -43,7 +43,7 @@ function Input({ setFormValues }) {
             {formik.errors.customerName}
           </div>
         )}
-        <label>CARD NUMBER</label>
+        <label className="text-xl">CARD NUMBER</label>
         <input
           className="p-2"
           type="text"
@@ -61,7 +61,7 @@ function Input({ setFormValues }) {
 
         <div className="flex justify-between w-full">
           <div className="flex flex-col gap-2">
-            <label>EXP.DATE (MM/YY)</label>
+            <label className="text-xl">EXP.DATE (MM/YY)</label>
             <div className="flex gap-3">
               <div>
                 <input
@@ -69,7 +69,7 @@ function Input({ setFormValues }) {
                   placeholder="MM"
                   name="month"
                   maxLength={2}
-                  className="w-16 text-center p-2"
+                  className="w-16  text-center p-2"
                   value={formik.values.month}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
@@ -100,20 +100,22 @@ function Input({ setFormValues }) {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-2">
-            <label>CVC</label>
+          <div className="flex flex-col justify-center items-center gap-2">
+            <label className="text-xl ">CVC</label>
             <input
               name="cvc"
               type="text"
               placeholder="123"
               maxLength={3}
-              className="w-16 text-center p-2"
+              className="w-16 text-center p-2 "
               value={formik.values.cvc}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
             {formik.touched.cvc && formik.errors.cvc && (
-              <div className="text-red-600 text-sm">{formik.errors.cvc}</div>
+              <div className="text-red-600 text-sm text-center">
+                {formik.errors.cvc}
+              </div>
             )}
           </div>
         </div>
