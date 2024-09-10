@@ -86,7 +86,7 @@ function Input({ setFormValues }) {
                   name="year"
                   type="text"
                   placeholder="YY"
-                  maxLength={2}
+                  maxLength={3}
                   className="w-16 text-center p-2"
                   value={formik.values.year}
                   onChange={formik.handleChange}
@@ -105,9 +105,9 @@ function Input({ setFormValues }) {
             <input
               name="cvc"
               type="text"
+              placeholder="123"
               maxLength={3}
-              placeholder="e.g. 123"
-              className="w-32 text-center p-2"
+              className="w-16 text-center p-2"
               value={formik.values.cvc}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}

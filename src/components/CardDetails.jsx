@@ -16,22 +16,22 @@ function CardDetails() {
   });
   return (
     <div className=" h-screen ">
-      <div className="bg-white   h-3/5 sm:h-screen sm:flex  ">
+      <div className="  h-screen sm:h-screen sm:flex  ">
         <div
-          className="h-4/5 sm:w-1/3  bg-slate-400  bg-cover sm:h-screen "
+          className="h-3/5 sm:w-1/3 bg-slate-500  bg-cover sm:h-screen flex flex-col  "
           style={{
             background: ` url(${desktop_BG}) `,
           }}
         >
-          <div className="sm:w-full sm:flex sm:flex-col-reverse sm:items-center sm:justify-center sm:h-screen sm:ml-36 ">
+          <div className="sm:w-full  sm:flex sm:flex-col-reverse sm:items-center sm:justify-center sm:h-screen h-screen sm:ml-36 flex flex-col  justify-end  ">
             <div
-              className=" w-11/12 sm:w-full   rounded-md  bg-cover bg-center h-64 relative top-24 left-8 sm:top-0 sm:left-16"
+              className=" w-11/12 sm:w-full  rounded-md  bg-cover bg-center h-64 relative top-24 left-8 sm:top-0 sm:left-16"
               style={{
                 backgroundImage: `url(${back_card})`,
               }}
             >
               <p className="cvcpin flex    justify-end items-center h-full">
-                {formValues.cvc ? formValues.cvc : "000"}
+                {formValues.cvc ? formValues.cvc : "123"}
               </p>
             </div>
 
@@ -42,8 +42,6 @@ function CardDetails() {
               }}
             >
               <div className="  p-5   ">
-                {/* <div className="bg-white rounded-full h-12 w-12"></div>
-                <div className="border-2 border-white rounded-full h-5 w-5"></div> */}
                 <img src={card_logo} alt="" />
               </div>
               <div className=" p-5 text-white text-2xl ">

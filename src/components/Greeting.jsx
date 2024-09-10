@@ -13,7 +13,7 @@ function Greeting() {
       <p className="text-dark-grayish-violet">We've added your card details </p>
       <button
         onClick={handleNavigation}
-        className="bg-very-dark-violet p-3 text-white w-full rounded-md"
+        className="sm:w-1/4 bg-very-dark-violet p-3 text-white w-full rounded-md"
       >
         Continue
       </button>

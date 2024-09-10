@@ -9,14 +9,9 @@ const validationSchema = Yup.object({
 
     .required("Please enter your name"),
   cardNo: Yup.number()
-
     .typeError("Wrong format, numbers only")
-    .min(16, "Card number must be 16 digits")
     .required("Card number is required"),
-  cvc: Yup.number()
-    .typeError("Must be a number")
-    .required("Can't be blank")
-    .min(3, "Enter three digit valid number"),
+
   month: Yup.number()
     .typeError("Must be a number")
     .max(12, "Month must be between 1 and 12")
@@ -25,6 +20,9 @@ const validationSchema = Yup.object({
     .typeError("Must be a number")
     .min(23, "Year must be 23 or later")
     .max(99, "Year must be less than 100")
+    .required("Can't be blank"),
+  cvc: Yup.string()
+    .matches(/^\d{3}$/, "Enter a valid 3-digit CVC number")
     .required("Can't be blank"),
 });
 
