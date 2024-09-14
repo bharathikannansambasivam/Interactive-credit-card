@@ -61,7 +61,7 @@ function Input({ setFormValues }) {
 
         <div className="flex justify-between w-full">
           <div className="flex flex-col gap-2">
-            <label className="text-xl">EXP.DATE (MM/YY)</label>
+            <label className="text-xl">EXP. DATE (MM/YY)</label>
             <div className="flex gap-3">
               <div>
                 <input
