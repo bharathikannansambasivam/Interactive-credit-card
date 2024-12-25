@@ -8,9 +8,10 @@ const validationSchema = Yup.object({
     )
 
     .required("Please enter your name"),
-  cardNo: Yup.number()
-    .typeError("Wrong format, numbers only")
-    .required("Card number is required"),
+
+cardNo: Yup.string()
+  .matches(/^\d{16}$/, "Card number must be exactly 16 digits")
+  .required("Card number is required"),
 
   month: Yup.number()
     .typeError("Must be a number")
